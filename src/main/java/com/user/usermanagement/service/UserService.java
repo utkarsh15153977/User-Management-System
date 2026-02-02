@@ -15,4 +15,5 @@ public interface UserService {
     User getUserById(Long id) throws UserNotFoundException;
     List<User> getAllUser();
     //User loadUserByUsername(String username);
+    User getUserByUsername(String username);
 }

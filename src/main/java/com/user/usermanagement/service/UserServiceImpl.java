@@ -83,4 +83,10 @@ public class UserServiceImpl implements UserService{
         userRepository.delete(user);
         log.info("User successfully deleted with ID: {}", id);
     }
+
+    @Override
+    public User getUserByUsername(String username) throws UserNotFoundException {
+        log.info("Attempting to get user by username: {}", username);
+        return userRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException("User not found with username: " + username));
+    }
 }

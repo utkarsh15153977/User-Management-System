@@ -7,23 +7,29 @@ import com.user.usermanagement.repository.UserRepository;
 import com.user.usermanagement.security.JwtUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/auth")
+@RequestMapping("api/auth/login")
 @Data
-
-@AllArgsConstructor
 public class AuthController {
     private final JwtUtil jwtUtil;
+
+    public AuthController(JwtUtil jwtUtil,@Lazy AuthenticationManager authenticationManager, UserRepository userRepository) {
+        this.jwtUtil = jwtUtil;
+        this.authenticationManager = authenticationManager;
+        this.userRepository = userRepository;
+    }
+
     private final AuthenticationManager authenticationManager;
     private final UserRepository userRepository;
 
-    @PostMapping("login")
-    public LoginResponseDto login(@RequestParam LoginRequestDto loginRequestDto){
+    @PostMapping()
+    public LoginResponseDto login(@RequestBody LoginRequestDto loginRequestDto){
 
         //Authenticate Username and Password
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(

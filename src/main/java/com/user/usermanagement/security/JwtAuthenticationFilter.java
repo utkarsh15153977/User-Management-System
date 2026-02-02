@@ -14,7 +14,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-@Component
 @Slf4j
 //@RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
@@ -34,8 +33,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         log.info("Header of the request URL ", header);
         String path = request.getRequestURI();
         log.info("Path of Request URL", path);
-        if(header==null && !header.startsWith("Bearer ")){
+        if(header==null || !header.startsWith("Bearer ")){
             log.info("Header of the request URL ", header);
+            filterChain.doFilter(request, response);
+            return;
         }
         else{
             String token = header.substring(7);
