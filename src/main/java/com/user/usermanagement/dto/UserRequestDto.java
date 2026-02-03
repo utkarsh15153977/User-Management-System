@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class UserRequestDto {
+    public Object requestDtos;
     private String name;
     private String username;
     private String password;

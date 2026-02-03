@@ -7,7 +7,9 @@ import com.user.usermanagement.repository.UserRepository;
 import com.user.usermanagement.security.JwtUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/auth")
 @Data
-
+@Slf4j
 @AllArgsConstructor
 public class AuthController {
     private final JwtUtil jwtUtil;
@@ -23,13 +25,18 @@ public class AuthController {
     private final UserRepository userRepository;
 
     @PostMapping("login")
-    public LoginResponseDto login(@RequestParam LoginRequestDto loginRequestDto){
+    public LoginResponseDto login(@RequestBody LoginRequestDto loginRequestDto){
 
-        //Authenticate Username and Password
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                loginRequestDto.getUsername(),
-                loginRequestDto.getPassword()));
-
+        try{
+            //Authenticate Username and Password
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+                    loginRequestDto.getUsername(),
+                    loginRequestDto.getPassword()));
+        }
+        catch(BadCredentialsException e){
+            System.out.println("Bad credentials");
+            log.info("Exception throwing {}", e.getMessage());
+        }
         //Save username and password in DB.
         User user = userRepository.findByUsername(loginRequestDto.getUsername())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));

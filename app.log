@@ -1,0 +1,570 @@
+2026-02-02T14:27:30.822+05:30  INFO 13536 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Starting UserManagementApplication using Java 21.0.8 with PID 13536 (F:\Java Programs\User-Management\target\classes started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:27:30.827+05:30  INFO 13536 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:27:30.898+05:30  INFO 13536 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T14:27:30.899+05:30  INFO 13536 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T14:27:32.387+05:30  INFO 13536 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:27:32.470+05:30  INFO 13536 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2026-02-02T14:27:33.290+05:30  INFO 13536 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-02-02T14:27:33.311+05:30  INFO 13536 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T14:27:33.311+05:30  INFO 13536 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-02T14:27:33.372+05:30  INFO 13536 --- [User-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2465 ms
+2026-02-02T14:27:33.631+05:30  INFO 13536 --- [User-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:27:33.709+05:30  INFO 13536 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:27:34.376+05:30  INFO 13536 --- [User-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:27:34.422+05:30  INFO 13536 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:27:34.591+05:30  INFO 13536 --- [User-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72e74820
+2026-02-02T14:27:34.594+05:30  INFO 13536 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:27:34.698+05:30  INFO 13536 --- [User-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:27:35.928+05:30  INFO 13536 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:27:36.011+05:30  INFO 13536 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:27:36.102+05:30 DEBUG 13536 --- [User-Management] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:27:36.241+05:30  INFO 13536 --- [User-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:27:36.524+05:30  WARN 13536 --- [User-Management] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService': Error creating bean with name 'userServiceImpl' defined in file [F:\Java Programs\User-Management\target\classes\com\user\usermanagement\service\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'emailService' defined in file [F:\Java Programs\User-Management\target\classes\com\user\usermanagement\service\EmailService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-02-02T14:27:36.525+05:30  INFO 13536 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:27:36.531+05:30  INFO 13536 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:27:36.537+05:30  INFO 13536 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T14:27:36.549+05:30  INFO 13536 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-02T14:27:36.563+05:30  INFO 13536 --- [User-Management] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-02T14:27:36.588+05:30 ERROR 13536 --- [User-Management] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.user.usermanagement.service.EmailService required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+
+2026-02-02T14:29:51.902+05:30  INFO 23620 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Starting UserManagementApplication using Java 21.0.8 with PID 23620 (F:\Java Programs\User-Management\target\classes started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:29:51.908+05:30  INFO 23620 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:29:51.991+05:30  INFO 23620 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T14:29:51.991+05:30  INFO 23620 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T14:29:53.045+05:30  INFO 23620 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:29:53.117+05:30  INFO 23620 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2026-02-02T14:29:53.834+05:30  INFO 23620 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-02-02T14:29:53.862+05:30  INFO 23620 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T14:29:53.862+05:30  INFO 23620 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-02T14:29:53.922+05:30  INFO 23620 --- [User-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1931 ms
+2026-02-02T14:29:54.188+05:30  INFO 23620 --- [User-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:29:54.256+05:30  INFO 23620 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:29:54.863+05:30  INFO 23620 --- [User-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:29:54.908+05:30  INFO 23620 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:29:55.196+05:30  INFO 23620 --- [User-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@429ad90a
+2026-02-02T14:29:55.200+05:30  INFO 23620 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:29:55.339+05:30  INFO 23620 --- [User-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:29:57.128+05:30  INFO 23620 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:29:57.257+05:30  INFO 23620 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:29:57.402+05:30 DEBUG 23620 --- [User-Management] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:29:57.550+05:30  INFO 23620 --- [User-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:29:57.925+05:30  WARN 23620 --- [User-Management] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService': Error creating bean with name 'userServiceImpl' defined in file [F:\Java Programs\User-Management\target\classes\com\user\usermanagement\service\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'emailService' defined in file [F:\Java Programs\User-Management\target\classes\com\user\usermanagement\service\EmailService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-02-02T14:29:57.926+05:30  INFO 23620 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:29:57.930+05:30  INFO 23620 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:29:57.940+05:30  INFO 23620 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T14:29:57.946+05:30  INFO 23620 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-02T14:29:57.959+05:30  INFO 23620 --- [User-Management] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-02T14:29:57.987+05:30 ERROR 23620 --- [User-Management] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.user.usermanagement.service.EmailService required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+
+2026-02-02T14:33:38.078+05:30  INFO 22132 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Starting UserManagementApplication using Java 21.0.8 with PID 22132 (F:\Java Programs\User-Management\target\classes started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:33:38.084+05:30  INFO 22132 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:33:38.163+05:30  INFO 22132 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T14:33:38.164+05:30  INFO 22132 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T14:33:39.146+05:30  INFO 22132 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:33:39.217+05:30  INFO 22132 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2026-02-02T14:33:39.968+05:30  INFO 22132 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-02-02T14:33:39.987+05:30  INFO 22132 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T14:33:39.988+05:30  INFO 22132 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-02T14:33:40.046+05:30  INFO 22132 --- [User-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1881 ms
+2026-02-02T14:33:40.265+05:30  INFO 22132 --- [User-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:33:40.322+05:30  INFO 22132 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:33:40.919+05:30  INFO 22132 --- [User-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:33:40.957+05:30  INFO 22132 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:33:41.104+05:30  INFO 22132 --- [User-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51765747
+2026-02-02T14:33:41.106+05:30  INFO 22132 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:33:41.213+05:30  INFO 22132 --- [User-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:33:42.554+05:30  INFO 22132 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:33:42.636+05:30  INFO 22132 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:33:42.717+05:30 DEBUG 22132 --- [User-Management] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:33:42.854+05:30  INFO 22132 --- [User-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:33:43.144+05:30  WARN 22132 --- [User-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T14:33:43.388+05:30 DEBUG 22132 --- [User-Management] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-02T14:33:43.507+05:30 TRACE 22132 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.AuthController:
+	{POST [/api/auth/login]}: login(LoginRequestDto)
+2026-02-02T14:33:43.512+05:30 TRACE 22132 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.UserController:
+	{GET [/api/user/fetchUser/{id}]}: getUserById(Long)
+	{POST [/api/user/createUser]}: createUser(UserRequestDto)
+	{GET [/api/user/fetchAllUsers]}: getAllUsers()
+2026-02-02T14:33:43.518+05:30 TRACE 22132 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-02-02T14:33:43.521+05:30 DEBUG 22132 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-02-02T14:33:43.558+05:30 DEBUG 22132 --- [User-Management] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-02T14:33:43.592+05:30 DEBUG 22132 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-02T14:33:43.680+05:30  WARN 22132 --- [User-Management] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-02-02T14:33:43.725+05:30 DEBUG 22132 --- [User-Management] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-02T14:33:43.880+05:30  INFO 22132 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-02-02T14:33:43.888+05:30  INFO 22132 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Started UserManagementApplication in 6.498 seconds (process running for 7.517)
+2026-02-02T14:34:19.746+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-02T14:34:19.746+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-02T14:34:19.748+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-02T14:34:19.748+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-02T14:34:19.748+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@42eec77
+2026-02-02T14:34:19.748+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@50b28b73
+2026-02-02T14:34:19.748+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-02T14:34:19.748+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-02T14:34:19.762+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/user/createUser
+2026-02-02T14:34:19.772+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.security.JwtAuthenticationFilter   : Header of the request URL 
+2026-02-02T14:34:19.772+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.security.JwtAuthenticationFilter   : Path of Request URL
+2026-02-02T14:34:19.779+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.security.JwtAuthenticationFilter   : JWT Authentication Failed Unable to load class named [io.jsonwebtoken.impl.DefaultJwtParserBuilder] from the thread context, current, or system/application ClassLoaders.  All heuristics have been exhausted.  Class could not be found.  Have you remembered to include the jjwt-impl.jar in your runtime classpath?
+2026-02-02T14:34:19.779+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-02-02T14:34:19.788+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/user/createUser
+2026-02-02T14:34:19.793+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/user/createUser", parameters={}
+2026-02-02T14:34:19.807+05:30 TRACE 22132 --- [User-Management] [http-nio-9090-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.user.usermanagement.controller.UserController#createUser(UserRequestDto)
+2026-02-02T14:34:19.969+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDto(name=Sneha Iyer, username=sneha_iyer, password=Sneha@2026Pwd, email=sneha.iyer@yahoo. (truncated)...]
+2026-02-02T14:34:19.985+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.controller.UserController          : UserController.createUser
+2026-02-02T14:34:19.985+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.controller.UserController          : User : User(id=null, name=Sneha Iyer, username=sneha_iyer, email=sneha.iyer@yahoo.com, password=Sneha@2026Pwd, mobileNumber=9988112233, role=null)
+2026-02-02T14:34:19.993+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.service.UserServiceImpl            : Attempting to add user with username: sneha_iyer
+2026-02-02T14:34:21.167+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.service.UserServiceImpl            : Assigned default role for USER to user: sneha_iyer
+2026-02-02T14:34:21.294+05:30  INFO 22132 --- [User-Management] [http-nio-9090-exec-1] c.u.u.controller.UserController          : User : User(id=16, name=Sneha Iyer, username=sneha_iyer, email=sneha.iyer@yahoo.com, password=$2a$10$eBl4KzpeZOJ8UzNcLzrvvuqWozoPfgvozuzGRkgb8SqoLb2CHS9RG, mobileNumber=9988112233, role=USER)
+2026-02-02T14:34:21.308+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-02T14:34:21.308+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDto(id=16, name=Sneha Iyer, username=sneha_iyer, email=sneha.iyer@yahoo.com, mobileNumbe (truncated)...]
+2026-02-02T14:34:21.388+05:30 DEBUG 22132 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-02T14:38:04.407+05:30  INFO 22132 --- [User-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T14:38:04.415+05:30  INFO 22132 --- [User-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-02T14:38:04.420+05:30  INFO 22132 --- [User-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:38:04.424+05:30  INFO 22132 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:38:04.429+05:30  INFO 22132 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T14:41:49.134+05:30  INFO 7424 --- [User-Management] [main] c.u.u.UserManagementApplicationTests     : Starting UserManagementApplicationTests using Java 21.0.8 with PID 7424 (started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:41:49.140+05:30  INFO 7424 --- [User-Management] [main] c.u.u.UserManagementApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:41:49.209+05:30 DEBUG 7424 --- [User-Management] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@338cc75f
+2026-02-02T14:41:50.498+05:30  INFO 7424 --- [User-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:41:50.579+05:30  INFO 7424 --- [User-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interface.
+2026-02-02T14:41:51.436+05:30  INFO 7424 --- [User-Management] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:41:51.536+05:30  INFO 7424 --- [User-Management] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:41:52.592+05:30  INFO 7424 --- [User-Management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:41:52.679+05:30  INFO 7424 --- [User-Management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:41:52.965+05:30  INFO 7424 --- [User-Management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@309e3f34
+2026-02-02T14:41:52.969+05:30  INFO 7424 --- [User-Management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:41:53.093+05:30  INFO 7424 --- [User-Management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:41:54.601+05:30  INFO 7424 --- [User-Management] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:41:54.691+05:30  INFO 7424 --- [User-Management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:41:54.800+05:30 DEBUG 7424 --- [User-Management] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:41:54.956+05:30  INFO 7424 --- [User-Management] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:41:55.458+05:30  WARN 7424 --- [User-Management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T14:41:55.917+05:30 DEBUG 7424 --- [User-Management] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-02T14:41:56.118+05:30 TRACE 7424 --- [User-Management] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.AuthController:
+	{POST [/api/auth/login]}: login(LoginRequestDto)
+2026-02-02T14:41:56.127+05:30 TRACE 7424 --- [User-Management] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.UserController:
+	{GET [/api/user/fetchUser/{id}]}: getUserById(Long)
+	{GET [/api/user/fetchAllUsers]}: getAllUsers()
+	{POST [/api/user/createUser]}: createUser(UserRequestDto)
+2026-02-02T14:41:56.133+05:30 TRACE 7424 --- [User-Management] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-02-02T14:41:56.137+05:30 DEBUG 7424 --- [User-Management] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-02-02T14:41:56.193+05:30 DEBUG 7424 --- [User-Management] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-02T14:41:56.269+05:30 DEBUG 7424 --- [User-Management] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-02T14:41:56.366+05:30  WARN 7424 --- [User-Management] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-02-02T14:41:56.414+05:30 DEBUG 7424 --- [User-Management] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-02T14:41:56.786+05:30  INFO 7424 --- [User-Management] [main] c.u.u.UserManagementApplicationTests     : Started UserManagementApplicationTests in 8.177 seconds (process running for 10.299)
+2026-02-02T14:41:57.578+05:30 DEBUG 7424 --- [User-Management] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@338cc75f, started on Mon Feb 02 14:41:49 IST 2026
+2026-02-02T14:41:57.588+05:30  INFO 7424 --- [User-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:41:57.599+05:30  INFO 7424 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:41:57.608+05:30  INFO 7424 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T14:42:27.573+05:30  INFO 15428 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Starting UserManagementApplication using Java 21.0.8 with PID 15428 (F:\Java Programs\User-Management\target\classes started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:42:27.577+05:30  INFO 15428 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:42:27.666+05:30  INFO 15428 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T14:42:27.667+05:30  INFO 15428 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T14:42:28.679+05:30  INFO 15428 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:42:28.748+05:30  INFO 15428 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2026-02-02T14:42:29.498+05:30  INFO 15428 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-02-02T14:42:29.515+05:30  INFO 15428 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T14:42:29.516+05:30  INFO 15428 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-02T14:42:29.579+05:30  INFO 15428 --- [User-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1911 ms
+2026-02-02T14:42:29.828+05:30  INFO 15428 --- [User-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:42:29.885+05:30  INFO 15428 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:42:30.498+05:30  INFO 15428 --- [User-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:42:30.540+05:30  INFO 15428 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:42:30.691+05:30  INFO 15428 --- [User-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c02e4f3
+2026-02-02T14:42:30.694+05:30  INFO 15428 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:42:30.800+05:30  INFO 15428 --- [User-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:42:32.297+05:30  INFO 15428 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:42:32.380+05:30  INFO 15428 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:42:32.462+05:30 DEBUG 15428 --- [User-Management] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:42:32.569+05:30  INFO 15428 --- [User-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:42:32.988+05:30  WARN 15428 --- [User-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T14:42:33.272+05:30 DEBUG 15428 --- [User-Management] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-02T14:42:33.385+05:30 TRACE 15428 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.AuthController:
+	{POST [/api/auth/login]}: login(LoginRequestDto)
+2026-02-02T14:42:33.391+05:30 TRACE 15428 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.UserController:
+	{GET [/api/user/fetchAllUsers]}: getAllUsers()
+	{GET [/api/user/fetchUser/{id}]}: getUserById(Long)
+	{POST [/api/user/createUser]}: createUser(UserRequestDto)
+2026-02-02T14:42:33.395+05:30 TRACE 15428 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-02-02T14:42:33.399+05:30 DEBUG 15428 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-02-02T14:42:33.436+05:30 DEBUG 15428 --- [User-Management] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-02T14:42:33.471+05:30 DEBUG 15428 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-02T14:42:33.563+05:30  WARN 15428 --- [User-Management] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-02-02T14:42:33.607+05:30 DEBUG 15428 --- [User-Management] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-02T14:42:33.769+05:30  INFO 15428 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-02-02T14:42:33.781+05:30  INFO 15428 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Started UserManagementApplication in 6.913 seconds (process running for 7.857)
+2026-02-02T14:42:52.793+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-02T14:42:52.798+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-02T14:42:52.798+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-02T14:42:52.800+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-02T14:42:52.802+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@55830dbf
+2026-02-02T14:42:52.802+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6f7dac14
+2026-02-02T14:42:52.804+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-02T14:42:52.804+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-02-02T14:42:52.824+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/user/createUser
+2026-02-02T14:42:52.839+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.security.JwtAuthenticationFilter   : Header of the request URL 
+2026-02-02T14:42:52.840+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.security.JwtAuthenticationFilter   : Path of Request URL
+2026-02-02T14:42:52.897+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.security.JwtAuthenticationFilter   : JWT Authentication Failed JWT strings must contain exactly 2 period characters. Found: 0
+2026-02-02T14:42:52.897+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-02-02T14:42:52.906+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/user/createUser
+2026-02-02T14:42:52.911+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/user/createUser", parameters={}
+2026-02-02T14:42:52.928+05:30 TRACE 15428 --- [User-Management] [http-nio-9090-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.user.usermanagement.controller.UserController#createUser(UserRequestDto)
+2026-02-02T14:42:53.131+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDto(name=Karan Malhotra, username=karan_malhotra, password=Karan#Secure26, email=karan.ma (truncated)...]
+2026-02-02T14:42:53.152+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.controller.UserController          : UserController.createUser
+2026-02-02T14:42:53.152+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.controller.UserController          : User : User(id=null, name=Karan Malhotra, username=karan_malhotra, email=karan.malhotra@outlook.com, password=Karan#Secure26, mobileNumber=7766554433, role=null)
+2026-02-02T14:42:53.152+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.service.UserServiceImpl            : Attempting to add user with username: karan_malhotra
+2026-02-02T14:42:54.376+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.service.UserServiceImpl            : Assigned default role for USER to user: karan_malhotra
+2026-02-02T14:42:54.521+05:30  INFO 15428 --- [User-Management] [http-nio-9090-exec-2] c.u.u.controller.UserController          : User : User(id=17, name=Karan Malhotra, username=karan_malhotra, email=karan.malhotra@outlook.com, password=$2a$10$X8x0UMmwVCy9W5F9CWLdieJsQCxSk2KLURvmPTZnoJhhZWsUxlHLK, mobileNumber=7766554433, role=USER)
+2026-02-02T14:42:54.530+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-02T14:42:54.530+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDto(id=17, name=Karan Malhotra, username=karan_malhotra, email=karan.malhotra@outlook.co (truncated)...]
+2026-02-02T14:42:54.633+05:30 DEBUG 15428 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-02T14:45:06.973+05:30  INFO 15428 --- [User-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T14:45:06.982+05:30  INFO 15428 --- [User-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-02T14:45:06.987+05:30  INFO 15428 --- [User-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:45:06.991+05:30  INFO 15428 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:45:06.996+05:30  INFO 15428 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T14:48:03.246+05:30  INFO 18192 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Starting UserManagementApplication using Java 21.0.8 with PID 18192 (F:\Java Programs\User-Management\target\classes started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:48:03.253+05:30  INFO 18192 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:48:03.391+05:30  INFO 18192 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T14:48:03.391+05:30  INFO 18192 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T14:48:05.108+05:30  INFO 18192 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:48:05.224+05:30  INFO 18192 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2026-02-02T14:48:06.506+05:30  INFO 18192 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-02-02T14:48:06.539+05:30  INFO 18192 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T14:48:06.541+05:30  INFO 18192 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-02T14:48:06.648+05:30  INFO 18192 --- [User-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3256 ms
+2026-02-02T14:48:07.007+05:30  INFO 18192 --- [User-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:48:07.120+05:30  INFO 18192 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:48:08.153+05:30  INFO 18192 --- [User-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:48:08.250+05:30  INFO 18192 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:48:08.522+05:30  INFO 18192 --- [User-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c02e4f3
+2026-02-02T14:48:08.523+05:30  INFO 18192 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:48:08.670+05:30  INFO 18192 --- [User-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:48:10.729+05:30  INFO 18192 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:48:10.866+05:30  INFO 18192 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:48:10.974+05:30 DEBUG 18192 --- [User-Management] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:48:11.104+05:30  INFO 18192 --- [User-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:48:11.619+05:30  WARN 18192 --- [User-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T14:48:12.044+05:30 DEBUG 18192 --- [User-Management] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-02T14:48:12.208+05:30 TRACE 18192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.AuthController:
+	{POST [/api/auth/login]}: login(LoginRequestDto)
+2026-02-02T14:48:12.218+05:30 TRACE 18192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.UserController:
+	{GET [/api/user/fetchAllUsers]}: getAllUsers()
+	{GET [/api/user/fetchUser/{id}]}: getUserById(Long)
+	{POST [/api/user/createUser]}: createUser(UserRequestDto)
+2026-02-02T14:48:12.225+05:30 TRACE 18192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-02-02T14:48:12.230+05:30 DEBUG 18192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-02-02T14:48:12.290+05:30 DEBUG 18192 --- [User-Management] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-02T14:48:12.359+05:30 DEBUG 18192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-02T14:48:12.538+05:30  WARN 18192 --- [User-Management] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-02-02T14:48:12.623+05:30 DEBUG 18192 --- [User-Management] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-02T14:48:12.884+05:30  INFO 18192 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-02-02T14:48:12.892+05:30  INFO 18192 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Started UserManagementApplication in 10.591 seconds (process running for 11.503)
+2026-02-02T14:48:49.569+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-02T14:48:49.571+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-02T14:48:49.571+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-02T14:48:49.571+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-02T14:48:49.575+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3ae8c7c2
+2026-02-02T14:48:49.575+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@62329645
+2026-02-02T14:48:49.576+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-02T14:48:49.577+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-02-02T14:48:49.593+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/user/createUser
+2026-02-02T14:48:49.603+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.security.JwtAuthenticationFilter   : Header of the request URL 
+2026-02-02T14:48:49.603+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.security.JwtAuthenticationFilter   : Path of Request URL
+2026-02-02T14:48:49.647+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.security.JwtAuthenticationFilter   : JWT Authentication Failed JWT strings must contain exactly 2 period characters. Found: 0
+2026-02-02T14:48:49.655+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-02-02T14:48:49.657+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/user/createUser
+2026-02-02T14:48:49.661+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/user/createUser", parameters={}
+2026-02-02T14:48:49.677+05:30 TRACE 18192 --- [User-Management] [http-nio-9090-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.user.usermanagement.controller.UserController#createUser(UserRequestDto)
+2026-02-02T14:48:49.842+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDto(name=Pooja Kulkarni, username=pooja_kulkarni, password=Pooja#Pass2026, email=pooja.ku (truncated)...]
+2026-02-02T14:48:49.855+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.controller.UserController          : UserController.createUser
+2026-02-02T14:48:49.855+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.controller.UserController          : User : User(id=null, name=Pooja Kulkarni, username=pooja_kulkarni, email=pooja.kulkarni@outlook.com, password=Pooja#Pass2026, mobileNumber=9122334455, role=null)
+2026-02-02T14:48:49.855+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.service.UserServiceImpl            : Attempting to add user with username: pooja_kulkarni
+2026-02-02T14:48:51.020+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.service.UserServiceImpl            : Assigned default role for USER to user: pooja_kulkarni
+2026-02-02T14:48:51.155+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.service.UserServiceImpl            : Triggering welcome email for: pooja.kulkarni@outlook.com
+2026-02-02T14:48:51.163+05:30  INFO 18192 --- [User-Management] [task-1] c.u.usermanagement.service.EmailService  : Starting Async email task for: pooja.kulkarni@outlook.com
+2026-02-02T14:48:51.165+05:30  INFO 18192 --- [User-Management] [http-nio-9090-exec-2] c.u.u.controller.UserController          : User : User(id=18, name=Pooja Kulkarni, username=pooja_kulkarni, email=pooja.kulkarni@outlook.com, password=$2a$10$xR/wONG4hK.rLDenbmhKvuq5P.Q9Dlz38FkT9islBQF2n/Ts7ShMK, mobileNumber=9122334455, role=USER)
+2026-02-02T14:48:51.182+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-02T14:48:51.184+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDto(id=18, name=Pooja Kulkarni, username=pooja_kulkarni, email=pooja.kulkarni@outlook.co (truncated)...]
+2026-02-02T14:48:51.281+05:30 DEBUG 18192 --- [User-Management] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-02T14:49:06.386+05:30 ERROR 18192 --- [User-Management] [task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.user.usermanagement.service.EmailService.sendWelcomeEmail(java.lang.String,java.lang.String)
+
+org.springframework.mail.MailSendException: Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 530-5.7.0 Must issue a STARTTLS command first. For more information, go to
+530-5.7.0  https://support.google.com/a/answer/3221692 and review RFC 3207
+530 5.7.0 specifications. d2e1a72fcca58-82379b57fafsm16303599b3a.26 - gsmtp
+; message exceptions (1) are:
+Failed message 1: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 530-5.7.0 Must issue a STARTTLS command first. For more information, go to
+530-5.7.0  https://support.google.com/a/answer/3221692 and review RFC 3207
+530 5.7.0 specifications. d2e1a72fcca58-82379b57fafsm16303599b3a.26 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-7.0.2.jar:7.0.2]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:337) ~[spring-context-support-7.0.2.jar:7.0.2]
+	at org.springframework.mail.javamail.JavaMailSender.send(JavaMailSender.java:101) ~[spring-context-support-7.0.2.jar:7.0.2]
+	at com.user.usermanagement.service.EmailService.sendWelcomeEmail(EmailService.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:112) ~[spring-aop-7.0.2.jar:7.0.2]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-02T14:49:12.054+05:30  INFO 18192 --- [User-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T14:49:12.062+05:30  INFO 18192 --- [User-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-02T14:49:12.068+05:30  INFO 18192 --- [User-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:49:12.073+05:30  INFO 18192 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:49:12.077+05:30  INFO 18192 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T14:49:29.666+05:30  INFO 27192 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Starting UserManagementApplication using Java 21.0.8 with PID 27192 (F:\Java Programs\User-Management\target\classes started by LENOVO in F:\Java Programs\User-Management)
+2026-02-02T14:49:29.670+05:30  INFO 27192 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-02-02T14:49:29.747+05:30  INFO 27192 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T14:49:29.747+05:30  INFO 27192 --- [User-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T14:49:30.794+05:30  INFO 27192 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T14:49:30.865+05:30  INFO 27192 --- [User-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2026-02-02T14:49:31.720+05:30  INFO 27192 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-02-02T14:49:31.743+05:30  INFO 27192 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T14:49:31.745+05:30  INFO 27192 --- [User-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-02T14:49:31.831+05:30  INFO 27192 --- [User-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2083 ms
+2026-02-02T14:49:32.126+05:30  INFO 27192 --- [User-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-02T14:49:32.217+05:30  INFO 27192 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-02T14:49:33.241+05:30  INFO 27192 --- [User-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T14:49:33.336+05:30  INFO 27192 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T14:49:33.761+05:30  INFO 27192 --- [User-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c02e4f3
+2026-02-02T14:49:33.768+05:30  INFO 27192 --- [User-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T14:49:33.948+05:30  INFO 27192 --- [User-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: user_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T14:49:35.576+05:30  INFO 27192 --- [User-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T14:49:35.669+05:30  INFO 27192 --- [User-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:49:35.757+05:30 DEBUG 27192 --- [User-Management] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-02-02T14:49:35.876+05:30  INFO 27192 --- [User-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-02T14:49:36.228+05:30  WARN 27192 --- [User-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T14:49:36.481+05:30 DEBUG 27192 --- [User-Management] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-02T14:49:36.590+05:30 TRACE 27192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.AuthController:
+	{POST [/api/auth/login]}: login(LoginRequestDto)
+2026-02-02T14:49:36.596+05:30 TRACE 27192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.u.u.c.UserController:
+	{POST [/api/user/createUser]}: createUser(UserRequestDto)
+	{GET [/api/user/fetchUser/{id}]}: getUserById(Long)
+	{GET [/api/user/fetchAllUsers]}: getAllUsers()
+2026-02-02T14:49:36.601+05:30 TRACE 27192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-02-02T14:49:36.604+05:30 DEBUG 27192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-02-02T14:49:36.641+05:30 DEBUG 27192 --- [User-Management] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-02T14:49:36.678+05:30 DEBUG 27192 --- [User-Management] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-02T14:49:36.787+05:30  WARN 27192 --- [User-Management] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-02-02T14:49:36.827+05:30 DEBUG 27192 --- [User-Management] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-02T14:49:36.988+05:30  INFO 27192 --- [User-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-02-02T14:49:37.001+05:30  INFO 27192 --- [User-Management] [restartedMain] c.u.u.UserManagementApplication          : Started UserManagementApplication in 8.04 seconds (process running for 8.965)
+2026-02-02T14:49:43.898+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-02T14:49:43.898+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-02T14:49:43.898+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-02T14:49:43.898+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-02T14:49:43.898+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3ae8c7c2
+2026-02-02T14:49:43.898+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@62329645
+2026-02-02T14:49:43.898+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-02T14:49:43.898+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-02-02T14:49:43.913+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/user/createUser
+2026-02-02T14:49:43.932+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] c.u.u.security.JwtAuthenticationFilter   : Header of the request URL 
+2026-02-02T14:49:43.933+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] c.u.u.security.JwtAuthenticationFilter   : Path of Request URL
+2026-02-02T14:49:43.980+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] c.u.u.security.JwtAuthenticationFilter   : JWT Authentication Failed JWT strings must contain exactly 2 period characters. Found: 0
+2026-02-02T14:49:43.987+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-02-02T14:49:43.991+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/user/createUser
+2026-02-02T14:49:43.996+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/user/createUser", parameters={}
+2026-02-02T14:49:44.011+05:30 TRACE 27192 --- [User-Management] [http-nio-9090-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.user.usermanagement.controller.UserController#createUser(UserRequestDto)
+2026-02-02T14:49:44.233+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDto(name=Pooja Kulkarni, username=pooja_kulkarni, password=Pooja#Pass2026, email=pooja.ku (truncated)...]
+2026-02-02T14:49:44.253+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] c.u.u.controller.UserController          : UserController.createUser
+2026-02-02T14:49:44.254+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] c.u.u.controller.UserController          : User : User(id=null, name=Pooja Kulkarni, username=pooja_kulkarni, email=pooja.kulkarni@outlook.com, password=Pooja#Pass2026, mobileNumber=9122334455, role=null)
+2026-02-02T14:49:44.257+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-3] c.u.u.service.UserServiceImpl            : Attempting to add user with username: pooja_kulkarni
+2026-02-02T14:49:45.242+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.user.usermanagement.exception.GlobalException#handleUserAlreadyExists(UserAlreadyExistingException)
+2026-02-02T14:49:45.250+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-02-02T14:49:45.256+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Email already exists"]
+2026-02-02T14:49:45.273+05:30  WARN 27192 --- [User-Management] [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.user.usermanagement.exception.UserAlreadyExistingException: Email already exists]
+2026-02-02T14:49:45.275+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 409 CONFLICT
+2026-02-02T14:50:08.505+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/user/createUser
+2026-02-02T14:50:08.505+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.security.JwtAuthenticationFilter   : Header of the request URL 
+2026-02-02T14:50:08.505+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.security.JwtAuthenticationFilter   : Path of Request URL
+2026-02-02T14:50:08.508+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.security.JwtAuthenticationFilter   : JWT Authentication Failed JWT strings must contain exactly 2 period characters. Found: 0
+2026-02-02T14:50:08.510+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-02-02T14:50:08.510+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/user/createUser
+2026-02-02T14:50:08.512+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/user/createUser", parameters={}
+2026-02-02T14:50:08.514+05:30 TRACE 27192 --- [User-Management] [http-nio-9090-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.user.usermanagement.controller.UserController#createUser(UserRequestDto)
+2026-02-02T14:50:08.516+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserRequestDto(name=Ankit Joshi, username=ankit_joshi, password=Ankit@Secure26, email=ankit.joshi@gm (truncated)...]
+2026-02-02T14:50:08.518+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.controller.UserController          : UserController.createUser
+2026-02-02T14:50:08.518+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.controller.UserController          : User : User(id=null, name=Ankit Joshi, username=ankit_joshi, email=ankit.joshi@gmail.com, password=Ankit@Secure26, mobileNumber=9876501122, role=null)
+2026-02-02T14:50:08.518+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.service.UserServiceImpl            : Attempting to add user with username: ankit_joshi
+2026-02-02T14:50:08.656+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.service.UserServiceImpl            : Assigned default role for USER to user: ankit_joshi
+2026-02-02T14:50:08.777+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.service.UserServiceImpl            : Triggering welcome email for: ankit.joshi@gmail.com
+2026-02-02T14:50:08.781+05:30  INFO 27192 --- [User-Management] [task-1] c.u.usermanagement.service.EmailService  : Starting Async email task for: ankit.joshi@gmail.com
+2026-02-02T14:50:08.784+05:30  INFO 27192 --- [User-Management] [http-nio-9090-exec-1] c.u.u.controller.UserController          : User : User(id=19, name=Ankit Joshi, username=ankit_joshi, email=ankit.joshi@gmail.com, password=$2a$10$vcGlgCAQEsPntZHZGgrX7O8bnHBj/zABr5d4EzIIyY7.LqExKCDtm, mobileNumber=9876501122, role=ADMIN)
+2026-02-02T14:50:08.786+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-02-02T14:50:08.788+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [UserResponseDto(id=19, name=Ankit Joshi, username=ankit_joshi, email=ankit.joshi@gmail.com, mobileNu (truncated)...]
+2026-02-02T14:50:08.862+05:30 DEBUG 27192 --- [User-Management] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-02T14:50:10.293+05:30 ERROR 27192 --- [User-Management] [task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.user.usermanagement.service.EmailService.sendWelcomeEmail(java.lang.String,java.lang.String)
+
+org.springframework.mail.MailSendException: Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 530-5.7.0 Must issue a STARTTLS command first. For more information, go to
+530-5.7.0  https://support.google.com/a/answer/3221692 and review RFC 3207
+530 5.7.0 specifications. d2e1a72fcca58-82379c64b4esm15075566b3a.69 - gsmtp
+; message exceptions (1) are:
+Failed message 1: org.eclipse.angus.mail.smtp.SMTPSendFailedException: 530-5.7.0 Must issue a STARTTLS command first. For more information, go to
+530-5.7.0  https://support.google.com/a/answer/3221692 and review RFC 3207
+530 5.7.0 specifications. d2e1a72fcca58-82379c64b4esm15075566b3a.69 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-7.0.2.jar:7.0.2]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:337) ~[spring-context-support-7.0.2.jar:7.0.2]
+	at org.springframework.mail.javamail.JavaMailSender.send(JavaMailSender.java:101) ~[spring-context-support-7.0.2.jar:7.0.2]
+	at com.user.usermanagement.service.EmailService.sendWelcomeEmail(EmailService.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.2.jar:7.0.2]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:112) ~[spring-aop-7.0.2.jar:7.0.2]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-02T14:52:57.015+05:30  INFO 27192 --- [User-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T14:52:57.025+05:30  INFO 27192 --- [User-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-02T14:52:57.030+05:30  INFO 27192 --- [User-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T14:52:57.035+05:30  INFO 27192 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T14:52:57.047+05:30  INFO 27192 --- [User-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

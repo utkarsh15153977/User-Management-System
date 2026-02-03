@@ -1,9 +1,10 @@
 package com.user.usermanagement.service;
 
+import com.user.usermanagement.dto.UserRequestDto;
 import com.user.usermanagement.entity.User;
 import com.user.usermanagement.exception.UserAlreadyExistingException;
 import com.user.usermanagement.exception.UserNotFoundException;
-import org.springframework.stereotype.Service;
+import jakarta.transaction.Transactional;
 
 import java.util.List;
 
@@ -15,4 +16,7 @@ public interface UserService {
     User getUserById(Long id) throws UserNotFoundException;
     List<User> getAllUser();
     //User loadUserByUsername(String username);
+    @Transactional(rollbackOn =  Exception.class)
+    List<User> saveAllUsers(List<UserRequestDto> dtos);
+
 }

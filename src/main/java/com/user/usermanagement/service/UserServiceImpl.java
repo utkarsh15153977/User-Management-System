@@ -1,24 +1,31 @@
 package com.user.usermanagement.service;
 
+import com.user.usermanagement.dto.UserRequestDto;
 import com.user.usermanagement.entity.Role;
 import com.user.usermanagement.entity.User;
 import com.user.usermanagement.exception.UserAlreadyExistingException;
 import com.user.usermanagement.exception.UserNotFoundException;
 import com.user.usermanagement.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService{
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-
-    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    private final EmailService emailService;
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, EmailService emailService) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.emailService = emailService;
     }
 
     @Override
@@ -37,10 +44,12 @@ public class UserServiceImpl implements UserService{
 
         //Assign default roles.
         if(user.getRole() == null){
-            user.setRole(Role.USER);
+            user.setRole(Role.ADMIN);
             log.info("Assigned default role for USER to user: {}", user.getUsername());
         }
-
+        User savedUser = userRepository.save(user);
+        log.info("Triggering welcome email for: {}", savedUser.getEmail());
+        emailService.sendWelcomeEmail(savedUser.getEmail(), savedUser.getName());
         return userRepository.save(user);
     }
     @Override
@@ -83,4 +92,49 @@ public class UserServiceImpl implements UserService{
         userRepository.delete(user);
         log.info("User successfully deleted with ID: {}", id);
     }
+
+
+    @Transactional(rollbackOn = Exception.class)
+    @Override
+    public List<User> saveAllUsers(List<UserRequestDto> dtos){
+        log.info("Attempting to save all users");
+        if(dtos == null || dtos.isEmpty()){
+            return new ArrayList<>();
+        }
+
+        Set<String> emails = new HashSet<>();
+        Set<String> usernames = new HashSet<>();
+        List<User> users = new ArrayList<>();
+
+        for(UserRequestDto dto : dtos){
+            String email = dto.getEmail();
+            String username = dto.getUsername();
+            if(email != null && !emails.add(email)){
+                throw new UserAlreadyExistingException("Email already exists");
+            }
+            if(username != null && !usernames.add(username)){
+                throw new UserAlreadyExistingException("Username already exists");
+            }
+
+            if(email != null && userRepository.findByEmail(email).isPresent()){
+                throw new UserAlreadyExistingException("Email already exists");
+            }
+
+            if(username != null && userRepository.findByUsername(username).isPresent()){
+                throw new UserAlreadyExistingException("Username already exists");
+            }
+
+            User user = new User();
+            user.setEmail(email);
+            user.setUsername(username);
+            user.setName(username);
+            user.setPassword(passwordEncoder.encode(dto.getPassword()));
+            if(user.getRole() == null){
+                user.setRole(Role.USER);
+            }
+            users.add(user);
+        }
+        return userRepository.saveAll(users);
+    }
+
 }

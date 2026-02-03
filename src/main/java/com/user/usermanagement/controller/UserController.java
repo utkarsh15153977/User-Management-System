@@ -3,38 +3,71 @@ package com.user.usermanagement.controller;
 import com.user.usermanagement.dto.UserRequestDto;
 import com.user.usermanagement.dto.UserResponseDto;
 import com.user.usermanagement.entity.User;
+import com.user.usermanagement.repository.UserRepository;
 import com.user.usermanagement.service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 @Slf4j
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService, PasswordEncoder passwordEncoder, UserRepository userRepository) {
+        this.userService = userService;
+        this.passwordEncoder = passwordEncoder;
+        this.userRepository = userRepository;
+    }
+
+    private final PasswordEncoder passwordEncoder;
+
+    private final UserRepository userRepository;
+
 
     //Create User
-    @PostMapping("/createUser")
-    public ResponseEntity<UserResponseDto> createUser(
-            @RequestBody UserRequestDto requestDto) {
-        log.info("UserController.createUser");
+    @PostMapping("/createUsers")
+    public ResponseEntity<List<UserResponseDto>> createUsers(
+            @RequestBody List<UserRequestDto> requestDtos) {
+        log.info("UserController.createUsers");
 
+        List<User> users = userService.saveAllUsers(requestDtos);
+        List<UserResponseDto> responses = users.stream()
+                .map(this::mapToResponseDto)
+                .collect(Collectors.toList());
+
+        log.info("Users : {}", responses);
+        return new ResponseEntity<>(responses, HttpStatus.CREATED);
+    }
+
+    @PutMapping("updateUserById")
+    public ResponseEntity<UserResponseDto> updateUserById(@RequestBody UserRequestDto requestDto) {
+        log.info("UserController.updateUserById");
         User user = mapToEntity(requestDto);
-        log.info("User : {}", user);
-        User savedUser = userService.addUser(user);
-        log.info("User : {}", savedUser);
 
-        return new ResponseEntity<>(
-                mapToResponseDto(savedUser),
-                HttpStatus.CREATED
+        //Update all the fields
+        user.setName(requestDto.getName());
+        user.setEmail(requestDto.getEmail());
+        user.setUsername(requestDto.getUsername());
+        user.setMobileNumber(requestDto.getMobileNumber());
+
+        if(requestDto.getPassword() != null) {
+            user.setPassword(passwordEncoder.encode(requestDto.getPassword()));
+        }
+
+        userRepository.save(user);
+        return  new ResponseEntity<>(
+                mapToResponseDto(user),
+                HttpStatus.OK
         );
     }
 
@@ -61,6 +94,11 @@ public class UserController {
 
         return ResponseEntity.ok(list);
     }
+
+//    @PutMapping("/addUsers")
+//    public ResponseEntity<List<UserResponseDto>> addUsers(@RequestBody List<UserRequestDto> requestDtos) {
+//
+//    }
 
     //-------- MAPPER METHODS --------
 
