@@ -46,6 +46,7 @@ public class UserController {
         return new ResponseEntity<>(mapToResponseDto(savedUser), HttpStatus.CREATED);
     }
 
+    //Update User
     @PutMapping("/updateUserById/{id}")
     public ResponseEntity<UserResponseDto> updateUserById(@RequestBody UserRequestDto requestDto, @PathVariable Long id) {
         log.info("UserController.updateUserById");
@@ -91,6 +92,14 @@ public class UserController {
         log.info("User : {}", list);
 
         return ResponseEntity.ok(list);
+    }
+
+    //Delete User by Id
+    @DeleteMapping("/removeUser/{id}")
+    public ResponseEntity<UserResponseDto> removeUserById(@PathVariable Long id) {
+        log.info("UserController.removeUserById");
+        userRepository.deleteById(id);
+        return ResponseEntity.ok(mapToResponseDto(userService.getUserById(id)));
     }
 
     //-------- MAPPER METHODS --------

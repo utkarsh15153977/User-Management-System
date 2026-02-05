@@ -36,7 +36,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/user/createUser").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/user/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/api/user/**").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/api/user/removeUser/{id}").hasRole("ADMIN, ROLE")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session ->
