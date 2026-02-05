@@ -5,16 +5,18 @@ import com.user.usermanagement.dto.UserResponseDto;
 import com.user.usermanagement.entity.User;
 import com.user.usermanagement.repository.UserRepository;
 import com.user.usermanagement.service.UserService;
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @Slf4j
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -35,24 +37,20 @@ public class UserController {
 
 
     //Create User
-    @PostMapping("/createUsers")
-    public ResponseEntity<List<UserResponseDto>> createUsers(
-            @RequestBody List<UserRequestDto> requestDtos) {
-        log.info("UserController.createUsers");
-
-        List<User> users = userService.saveAllUsers(requestDtos);
-        List<UserResponseDto> responses = users.stream()
-                .map(this::mapToResponseDto)
-                .collect(Collectors.toList());
-
-        log.info("Users : {}", responses);
-        return new ResponseEntity<>(responses, HttpStatus.CREATED);
+    @PostMapping("/createUser")
+    public ResponseEntity<UserResponseDto> createUser(@RequestBody UserRequestDto requestDto) {
+        log.info("UserController.createUser");
+        User user = mapToEntity(requestDto);
+        User savedUser = userService.addUser(user);
+        log.info("User : {}", savedUser);
+        return new ResponseEntity<>(mapToResponseDto(savedUser), HttpStatus.CREATED);
     }
 
-    @PutMapping("updateUserById")
-    public ResponseEntity<UserResponseDto> updateUserById(@RequestBody UserRequestDto requestDto) {
+    @PutMapping("/updateUserById/{id}")
+    public ResponseEntity<UserResponseDto> updateUserById(@RequestBody UserRequestDto requestDto, @PathVariable Long id) {
         log.info("UserController.updateUserById");
-        User user = mapToEntity(requestDto);
+        User user = userRepository.findById(id).
+                orElseThrow(() -> new UsernameNotFoundException("User Id not found, enter which is existing."));
 
         //Update all the fields
         user.setName(requestDto.getName());
@@ -94,11 +92,6 @@ public class UserController {
 
         return ResponseEntity.ok(list);
     }
-
-//    @PutMapping("/addUsers")
-//    public ResponseEntity<List<UserResponseDto>> addUsers(@RequestBody List<UserRequestDto> requestDtos) {
-//
-//    }
 
     //-------- MAPPER METHODS --------
 
